@@ -1,0 +1,2 @@
+# Aimbot
+A Discord Bot
