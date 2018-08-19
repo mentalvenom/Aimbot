@@ -17,6 +17,10 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
+  await client.change_presence(game=discord.Game(name="&commands"))
+
+if message.content.startswith('&help'):
+    await client.send_message(message.channel,'{0.author.mention} check your DM's ')
   
 
 client.run(os.environ['TOKEN'])
