@@ -22,10 +22,13 @@ if message.content.startswith('&help'):
     await client.send_message(message.channel,'{0.author.mention} check your DM's ')
 
 if message.content.startswith('&help'):
-    await client.send_messageuser(message.channel,'I'm @Aimbot . Heres what I can do:  \n')
+    await client.send_messageuser(message.channel,'I'm @Aimbot . Heres what I can do:  \n ')
                                   
  if message.content.startswith('&src'):
-    await client.send_message(message.channel,'')
+    await client.send_message(message.channel,'https://github.com/FreddyMarsden/Aimbot')
+                              
+ if message.content.startswith('&log'):
+    await client.send_message(message.channel,'') 
 
   
 
