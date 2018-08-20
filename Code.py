@@ -1,11 +1,8 @@
 import discord
+from discord.ext import commands
+from discord.ext.commands import Bot
 import asyncio
-import requests
-import os
-from os.path import join, dirname
-from dotenv import load_dotenv
-from random import randint
-client = discord.Client()
+
 
 @client.event
 async def on_ready():
