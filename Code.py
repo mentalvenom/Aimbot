@@ -21,6 +21,9 @@ async def on_message(message):
 
 if message.content.startswith('&help'):
     await client.send_message(message.channel,'{0.author.mention} check your DM's ')
+
+if message.content.startswith('&help'):
+    await client.send_messageuser(message.channel,'I'm @Aimbot . Heres what I can do:  \n')
   
 
 client.run(os.environ['TOKEN'])
