@@ -23,6 +23,10 @@ if message.content.startswith('&help'):
 
 if message.content.startswith('&help'):
     await client.send_messageuser(message.channel,'I'm @Aimbot . Heres what I can do:  \n')
+                                  
+ if message.content.startswith('&src'):
+    await client.send_message(message.channel,'')
+
   
 
 client.run(os.environ['TOKEN'])
