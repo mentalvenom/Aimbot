@@ -1,5 +1,5 @@
 # Aimbot
-Current Commands:/n
-&help - Brings up this message /n
-&src - The source code for the bot /n
+Current Commands:<br />
+&help - Brings up this message <br />
+&src - The source code for the bot <br />
 &log - The bots audit log 
