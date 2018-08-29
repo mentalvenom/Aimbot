@@ -19,7 +19,7 @@ async def on_message(message):
   await client.change_presence(game=discord.Game(name="&commands"))
 
 if message.content.startswith('&help'):
-    await client.send_message(message.channel,'{0.author.mention} check your DM's ')
+    await client.send_message(message.channel,':e_mail:{0.author.mention} check your DM's ')
         else message.content.startswith('&help'):
             await client.send_messageuser(message.channel,'I'm @Aimbot . Heres what I can do:  \n ')
                                   
