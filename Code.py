@@ -27,7 +27,7 @@ if message.content.startswith('&help'):
     await client.send_message(message.channel,'https://github.com/FreddyMarsden/Aimbot')
                               
  if message.content.startswith('&log'):
-    await client.send_message(message.channel,'') 
+    await client.send_message(message.channel,'https://dashboard.heroku.com/apps/aimbot/activity') 
 
   
 
