@@ -21,7 +21,7 @@ async def on_message(message):
 if message.content.startswith('&help'):
     await client.send_message(message.channel,':e_mail:{0.author.mention} check your DM's ')
         else message.content.startswith('&help'):
-        await client.send_messageuser(message.channel,'I'm @Aimbot . Heres what I can do:  \n ')
+        await client.send_messageuser(message.channel,'I'm @Aimbot . Heres what I can do:  \n  ')
                                   
  if message.content.startswith('&src'):
     await client.send_message(message.channel,'https://github.com/FreddyMarsden/Aimbot')
