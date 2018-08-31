@@ -28,6 +28,11 @@ if message.content.startswith('&help'):
                               
  if message.content.startswith('&log'):
     await client.send_message(message.channel,'https://dashboard.heroku.com/apps/aimbot/activity') 
+                      
+ if message.content.startswith('&roledice'):
+    await client.send_message(message.channel,':game_die: ') 
+                      
+ 
 
   
 
