@@ -1,9 +1,9 @@
 import discord
+import random
 import asyncio
 import requests
 import os
 from os.path import join, dirname
-from dotenv import load_dotenv
 from random import randint
 client = discord.Client()
 @client.event
@@ -16,24 +16,25 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-  await client.change_presence(game=discord.Game(name="&commands"))
+  await client.change_presence(game=discord.Game(name="&help"))
 
-if message.content.startswith('&help'):
-    await client.send_message(message.channel,':e_mail:{0.author.mention} check your DM's ')
-        else message.content.startswith('&help'):
-        await client.send_messageuser(message.channel,'I'm @Aimbot . Heres what I can do:  \n  ')
-                                  
- if message.content.startswith('&src'):
+  if message.content.startswith('&help'):
+    await client.send_message(message.channel,":e_mail: <@%s> check your DM's " % (message.author.id))
+		 else message.content.startswith('&help'):
+        await client.send_messageuser(message.channel,'I'm @Aimbot . Heres what I can do:  \n ')
+  
+	if message.content.startswith('&src'):
     await client.send_message(message.channel,'https://github.com/FreddyMarsden/Aimbot')
                               
- if message.content.startswith('&log'):
-    await client.send_message(message.channel,'https://dashboard.heroku.com/apps/aimbot/activity') 
-                      
- if message.content.startswith('&rolldice'):
-    await client.send_message(message.channel,':game_die: ') 
-                      
- 
+  if message.content.startswith('&log'):
+    await client.send_message(message.channel,'') 
+
+  if message.content == "test role":
+           role = discord.utils.get(server.roles, name="test role")
+           await client.add_roles(message.author.id, role)
+
 
   
+token = os.environ.get("TOKEN")
+client.run(token)
 
-client.run(os.environ['TOKEN'])
