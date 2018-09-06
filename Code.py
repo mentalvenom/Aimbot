@@ -20,7 +20,7 @@ async def on_message(message):
 
  if message.content.startswith('+help'):
    await client.send_message(message.channel,":e_mail: <@%s> check your DM's " % (message.author.id))
-   await client.send_message(message.author, "Current Commands: /n &help - Brings up this message /n &src - The source code for the bot ")
+   await client.send_message(message.author, "Current Commands: \n &help - Brings up this message \n &src - The source code for the bot ")
   
 	 
   
