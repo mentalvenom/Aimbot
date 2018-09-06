@@ -16,10 +16,12 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
- await client.change_presence(game=discord.Game(name="&help"))
+ await client.change_presence(game=discord.Game(name="+help"))
 
  if message.content.startswith('+help'):
    await client.send_message(message.channel,":e_mail: <@%s> check your DM's " % (message.author.id))
+   await client.send_message(message.author, "Current Commands: /n &help - Brings up this message /n &src - The source code for the bot ")
+  
 	 
   
  if message.content.startswith('+src'):
