@@ -22,7 +22,7 @@ async def on_message(message):
     await client.send_message(message.channel,":e_mail: <@%s> check your DM's " % (message.author.id))
 		 
   
-	if message.content.startswith('&src'):
+ if message.content.startswith('&src'):
     await client.send_message(message.channel,'https://github.com/FreddyMarsden/Aimbot')
                               
   if message.content.startswith('&log'):
