@@ -16,19 +16,19 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-  await client.change_presence(game=discord.Game(name="&help"))
+ await client.change_presence(game=discord.Game(name="&help"))
 
-  if message.content.startswith('&help'):
-    await client.send_message(message.channel,":e_mail: <@%s> check your DM's " % (message.author.id))
-		 
+ if message.content.startswith('+help'):
+   await client.send_message(message.channel,":e_mail: <@%s> check your DM's " % (message.author.id))
+	 
   
- if message.content.startswith('&src'):
+ if message.content.startswith('+src'):
     await client.send_message(message.channel,'https://github.com/FreddyMarsden/Aimbot')
                               
-  if message.content.startswith('&log'):
+ if message.content.startswith('+log'):
     await client.send_message(message.channel,'') 
 
-  if message.content == "test role":
+ if message.content == "test role":
            role = discord.utils.get(server.roles, name="test role")
            await client.add_roles(message.author.id, role)
 
@@ -36,4 +36,3 @@ async def on_message(message):
   
 token = os.environ.get("TOKEN")
 client.run(token)
-
