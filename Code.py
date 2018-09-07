@@ -14,13 +14,22 @@ async def on_ready():
     print('copy paste this in your browser to authorize bot https://discordapp.com/oauth2/authorize?client_id={}&scope=bot&permissions=0'.format(os.environ['CLIENTID']))
     print('------')
 
+dice = [
+"1",
+"2",
+"3",
+"4",
+"5",
+"6",
+]
+
 @client.event
 async def on_message(message):
  await client.change_presence(game=discord.Game(name="+help"))
 
  if message.content.startswith('+help'):
    await client.send_message(message.channel,":e_mail: <@%s> check your DM's " % (message.author.id))
-   await client.send_message(message.author, "Current Commands: \n &help - Brings up this message \n &src - The source code for the bot ")
+   await client.send_message(message.author, "Current Commands: \n +help - Brings up this message \n +src - The source code for the bot ")
   
 	 
   
@@ -32,9 +41,13 @@ async def on_message(message):
 
  if message.content == "test role":
            role = discord.utils.get(server.roles, name="test role")
-           await client.add_roles(message.author.id, role)
+           await client.add_roles(message.author.id, 
+           role)
 
-
+ if message.content.startswith('+rolldice'):
+		    await client.send_message(message.channel, ":game_die:you rolled a " + choice(dice))
+  
   
 token = os.environ.get("TOKEN")
 client.run(token)
+
