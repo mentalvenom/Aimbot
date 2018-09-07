@@ -37,7 +37,10 @@ async def on_message(message):
     await client.send_message(message.channel,'https://github.com/FreddyMarsden/Aimbot')
                               
  if message.content.startswith('+log'):
-    await client.send_message(message.channel,'') 
+    await client.send_message(message.channel,'')
+
+ if message.content.startswith('+vote'):
+    await client.send_message(message.channel,'vore for this bot on the discord bot list here: ')
 
  if message.content == "test role":
            role = discord.utils.get(server.roles, name="test role")
