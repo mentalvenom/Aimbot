@@ -48,7 +48,7 @@ async def on_message(message):
            role)
 
  if message.content.startswith('+rolldice'):
-		    await client.send_message(message.channel, ":game_die:you rolled a " + choice(dice))
+    await client.send_message(message.channel, "you rolled a " + choice(dice))
   
   
 token = os.environ.get("TOKEN")
